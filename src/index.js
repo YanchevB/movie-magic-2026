@@ -4,10 +4,12 @@ import { engine } from 'express-handlebars';
 const app = express();
 
 //Setup Handlebars
-
 app.engine('hbs', engine());
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
+
+//Setup static files
+app.use(express.static('./src/public'));
 
 app.get('/', (req, res) => {
     res.render('home', { layout: false });
