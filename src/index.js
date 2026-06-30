@@ -1,5 +1,6 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import homeController from './controllers/homeController.js';
 
 const app = express();
 
@@ -13,14 +14,9 @@ app.set('views', './src/views');
 //Setup static files
 app.use(express.static('./src/public'));
 
-//Routes
-app.get('/', (req, res) => {
-    res.render('home');
-});
+//Setup routes
+app.use('/', homeController);
 
-app.get('/about', (req, res) => {
-    res.render('about');
-});
-
+//Start server
 app.listen(3000, () =>
     console.log('Server is running on http://localhost:3000...'));
