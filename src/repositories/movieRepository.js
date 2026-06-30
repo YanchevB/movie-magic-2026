@@ -11,7 +11,13 @@ async function readDb(collection) {
     return collection ? db[collection] : db;
 }
 
-export async function getAllMovies() {
+async function getAll() {
     const movies = await readDb('movies');
     return movies;
 }
+
+const movieRepository = {
+    getAll
+};
+
+export default movieRepository;
