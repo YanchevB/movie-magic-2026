@@ -51,3 +51,59 @@ SoftUni JS Back-End Course Workshop
  - [ ] Dynamic page title (basic)
  - [ ] Rating (temp solution)
  - [ ] File Persistence
+
+ ## Workshop 2 - PostgreSQL and Prisma
+
+### Prerequisites
+ - [ ] PostgreSQL Installed `psql --version`
+ - [ ] GUI Client 
+
+### Setup Database
+ - [ ] Install and setup typescript support
+ - [ ] Change npm start script to use tsx `tsx --watch src/index.js`
+ - [ ] Install prisma related packages
+ - [ ] Initialize prisma `npx prisma init --output ../generated/prisma`
+ - [ ] Add database_url env variable
+ - [ ] Generate first client `npx prisma generate`
+ - [ ] Instantiate prisma client
+
+### Setup models
+ - [ ] Add Movie model
+ - [ ] Migrate database `npx prisma migrate dev --name add_movies_table` or `npx prisma db push`
+
+### Refactor Movies
+ - [ ] Remove uuid
+ - [ ] Create Movie
+ - [ ] Read all movies
+ - [ ] Movie details page 
+ - [ ] Remove file persistance related code
+
+### Artist
+ - [ ] Add resources
+ - [ ] Add artist model
+ - [ ] Add artist view
+ - [ ] Add artist controller
+ - [ ] Add to routes
+ - [ ] Add header link
+ - [ ] Modify create form
+ - [ ] Add artist post action
+ - [ ] Add artist service
+ - [ ] Add artist repository
+
+### Attach Artist to Movie
+ - [ ] Add relation between artists and movies (Implicit many-to-many)
+ - [ ] Add page view
+ - [ ] Add dynamic data
+ - [ ] Populate artist select
+ - [ ] Attach function
+
+### Show Artists on Details Page
+ - [ ] Modify details view
+ - [ ] Link to attach page
+ - [ ] Show dynamic cast
+
+### Bonuses
+ - [ ] Show filtered artists in attach page
+ - [ ] Search filter in db
+ - [ ] Name in movie (Explicit Many-to-Many)
+ - [ ] Modify service export
