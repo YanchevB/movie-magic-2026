@@ -31,13 +31,13 @@ SoftUni JS Back-End Course Workshop
    - [x] Add service
    - [x] Add repository
  - [x] Redirect after creation
- - [ ] Add unique id for each created movie
+ - [x] Add unique id for each created movie
 ### Details
- - [ ] Add navigation button for detail page
- - [ ] Add route with param for details page 
- - [ ] GetOne movie from service
- - [ ] Find movie by id from repository
- - [ ] Render details page with dynamic data
+ - [x] Add navigation button for detail page
+ - [x] Add route with param for details page 
+ - [x] GetOne movie from service
+ - [x] Find movie by id from repository
+ - [x] Render details page with dynamic data
 ### Search
  - [ ] Show static search page
  - [ ] Render all movies

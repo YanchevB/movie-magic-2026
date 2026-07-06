@@ -23,6 +23,13 @@ async function getAll() {
     return movies;
 }
 
+async function getById(movieId) {
+    const movies = await readDb('movies');
+    const movie = movies.find(m => m.id === movieId);
+
+    return movie;
+}
+
 async function create(movieData) {
     movieData.id = uuid();
 
@@ -34,7 +41,8 @@ async function create(movieData) {
 
 const movieRepository = {
     getAll,
-    create
+    create,
+    getById
 };
 
 export default movieRepository;

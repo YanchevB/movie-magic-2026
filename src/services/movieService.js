@@ -8,9 +8,14 @@ function create(movieData) {
     return movieRepository.create(movieData);
 }
 
+async function getById(movieId) {
+    return await movieRepository.getById(movieId);
+}
+
 const movieService = {
     getAll,
-    create
+    create,
+    getById
 }
 
 export default movieService;

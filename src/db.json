@@ -49,6 +49,17 @@
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
       "description": "asdasdasd",
       "id": "f1199a15-6163-4213-a279-0cf7abe09a19"
+    },
+    {
+      "title": "Nuovo Cinema Paradiso",
+      "category": "movie",
+      "genre": "Drama",
+      "director": "Giuseppe Tornatore",
+      "year": "1988",
+      "imageUrl": "https://www.raiplay.it/dl/img/2019/10/22/1571762508677_1536x2048logo.JPG",
+      "rating": "10",
+      "description": "Mnogo hubav film",
+      "id": "0d5d9e0c-52c7-40bd-a9dc-70baa1e04fa3"
     }
   ]
 }
