@@ -4,7 +4,7 @@ import movieService from "../services/movieService.js";
 const movieController = Router();
 
 movieController.get('/create', (req, res) => {
-    res.render('movies/create');
+    res.render('movies/create', { pageTitle: 'Create Movie' });
 });
 
 movieController.post('/create', async (req, res) => {
@@ -20,8 +20,7 @@ movieController.get('/:movieId/details', async (req, res) => {
 
     const movie = await movieService.getById(movieId);
 
-
-    res.render('movies/details', movie);
+    res.render('movies/details', { ...movie, pageTitle: movie.title });
 })
 
 export default movieController;
