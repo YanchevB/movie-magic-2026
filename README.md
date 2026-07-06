@@ -39,7 +39,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Find movie by id from repository
  - [x] Render details page with dynamic data
 ### Search
- - [ ] Show static search page
+ - [x] Show static search page
  - [ ] Render all movies
  - [ ] Modify search form
  - [ ] Filter movies
@@ -50,7 +50,7 @@ SoftUni JS Back-End Course Workshop
 ### Bonuses
  - [ ] Dynamic page title (basic)
  - [ ] Rating (temp solution)
- - [ ] File Persistence
+ - [x] File Persistence
 
  ## Workshop 2 - PostgreSQL and Prisma
 
