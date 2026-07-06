@@ -1,7 +1,7 @@
 import movieRepository from "../repositories/movieRepository.js";
 
-async function getAll() {
-    return await movieRepository.getAll();
+async function getAll(filter = {}) {
+    return await movieRepository.getAll(filter);
 }
 
 function create(movieData) {
