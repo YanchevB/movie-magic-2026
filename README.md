@@ -31,7 +31,7 @@ SoftUni JS Back-End Course Workshop
    - [x] Add service
    - [x] Add repository
  - [x] Redirect after creation
- - [ ] Add unique if for each cerated movie
+ - [ ] Add unique id for each created movie
 ### Details
  - [ ] Add navigation button for detail page
  - [ ] Add route with param for details page 

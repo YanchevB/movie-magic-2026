@@ -21,6 +21,7 @@
   "homepage": "https://github.com/YanchevB/movie-magic-2026#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "express-handlebars": "^8.0.3"
+    "express-handlebars": "^8.0.3",
+    "uuid": "^14.0.1"
   }
 }
