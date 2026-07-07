@@ -20,7 +20,7 @@ movieController.get('/:movieId/details', async (req, res) => {
 
     const movie = await movieService.getById(movieId);
 
-    res.render('movies/details', { ...movie, pageTitle: movie.title });
+    res.render('movies/details', { movie, pageTitle: movie.title });
 })
 
 export default movieController;
