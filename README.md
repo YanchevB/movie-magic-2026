@@ -60,7 +60,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Setup Database
  - [x] Install and setup typescript support
- - [ ] Change npm start script to use tsx `tsx --watch src/index.js`
+ - [x] Change npm start script to use tsx `tsx --watch src/index.js`
  - [ ] Install prisma related packages
  - [ ] Initialize prisma `npx prisma init --output ../generated/prisma`
  - [ ] Add database_url env variable
