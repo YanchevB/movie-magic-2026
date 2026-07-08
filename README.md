@@ -55,11 +55,11 @@ SoftUni JS Back-End Course Workshop
  ## Workshop 2 - PostgreSQL and Prisma
 
 ### Prerequisites
- - [ ] PostgreSQL Installed `psql --version`
- - [ ] GUI Client 
+ - [x] PostgreSQL Installed `psql --version`
+ - [x] GUI Client 
 
 ### Setup Database
- - [ ] Install and setup typescript support
+ - [x] Install and setup typescript support
  - [ ] Change npm start script to use tsx `tsx --watch src/index.js`
  - [ ] Install prisma related packages
  - [ ] Initialize prisma `npx prisma init --output ../generated/prisma`
