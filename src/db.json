@@ -7,6 +7,7 @@
       "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans.",
       "imageUrl": "/img/jungle-cruise.jpeg",
       "director": "Jaume Collet-Serra",
+      "rating": 6.4,
       "year": "2021",
       "category": "movie"
     },
@@ -17,6 +18,7 @@
       "description": "An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_FMjpg_UX1000_.jpg",
       "director": "Zack Snyder",
+      "rating": 7.5,
       "year": "2013",
       "category": "movie"
     },
@@ -26,6 +28,7 @@
       "category": "movie",
       "genre": "Superhero",
       "director": "Anthony Russo",
+      "rating": 9.0,
       "year": "2019",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
       "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe."
@@ -35,6 +38,7 @@
       "category": "movie",
       "genre": "Biography",
       "director": " Jon Gunn",
+      "rating": 6.4,
       "year": "2017",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjcy-Q6F8E2JDeZzgHYaOWqMfbZeZzgUQS8A&s",
       "description": "An investigative journalist and self-proclaimed atheist sets out to disprove the existence of God after his wife becomes a Christian.",
@@ -45,6 +49,7 @@
       "category": "animation",
       "genre": "superhero",
       "director": " Peter Jackson",
+      "rating": 3.4,
       "year": "2021",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
       "description": "asdasdasd",
@@ -55,6 +60,7 @@
       "category": "movie",
       "genre": "Drama",
       "director": "Giuseppe Tornatore",
+      "rating": 8.8,
       "year": "1988",
       "imageUrl": "https://www.raiplay.it/dl/img/2019/10/22/1571762508677_1536x2048logo.JPG",
       "rating": "10",

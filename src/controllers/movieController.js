@@ -20,7 +20,11 @@ movieController.get('/:movieId/details', async (req, res) => {
 
     const movie = await movieService.getById(movieId);
 
-    res.render('movies/details', { movie, pageTitle: movie.title });
+    //Quick and basic solution to render the stars | TODO: Fix it 
+    const rating = Math.floor(movie.rating);
+    const ratingStars = '&#x2605;'.repeat(rating);
+
+    res.render('movies/details', { movie, pageTitle: movie.title, ratingStars });
 })
 
 export default movieController;

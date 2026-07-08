@@ -5,6 +5,7 @@ async function getAll(filter = {}) {
 }
 
 function create(movieData) {
+    movieData.rating = Number(movieData.rating);
     return movieRepository.create(movieData);
 }
 
