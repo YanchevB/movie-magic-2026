@@ -107,3 +107,57 @@ SoftUni JS Back-End Course Workshop
  - [ ] Search filter in db
  - [ ] Name in movie (Explicit Many-to-Many)
  - [ ] Modify service export
+
+ ## Workshop 3 - Session and Authentication
+
+### Intro
+ - [ ] Add resources
+
+### Register
+ - [ ] Add auth controller
+ - [ ] Add register page
+ - [ ] Add register post action
+ - [ ] Add service
+ - [ ] Add repository
+ - [X] Add model
+ - [ ] Hash password `npm i bcrypt`
+
+### Login
+ - [ ] Add login page
+ - [ ] Add login post action
+ - [ ] Add login service method
+ - [ ] Add findByEmail repository method
+ - [ ] Validate password
+ - [ ] Issue JWT token `npm i jsonwebtoken`
+ - [ ] Return token in cookie
+
+### Logout
+ - [ ] Add logout action
+ - [ ] Use logout on invalid token
+
+### Authentication & Authorization
+ - [ ] Create auth middleware
+ - [ ] Setup cookie parser
+ - [ ] Validate token
+ - [ ] Add isAuthenticated guard
+ - [ ] Add isGuest guard
+ 
+### Edit and Delete Movies
+ - [ ] Add user movies relation
+ - [ ] Add owner on movie create
+ - [ ] Show dynamic details buttons
+ - [ ] Implement delete button
+ - [ ] Add static edit page
+ - [ ] Add dynamic values to edit page
+ - [ ] Implement edit on post
+
+### Dynamic Navigation
+ - [ ] Show dynamic navigation based on user session
+
+### Bonuses
+ - [ ] Validate repeat password
+ - [ ] Automatic login on register
+ - [ ] Fix secret
+ - [ ] Fix select on edit
+ - [ ] Make token generation async
+ - [ ] Fix rating
