@@ -76,7 +76,7 @@ SoftUni JS Back-End Course Workshop
  - [ ] Create Movie
  - [ ] Read all movies
  - [ ] Movie details page 
- - [ ] Remove file persistance related code
+ - [ ] Remove file persistence related code
 
 ### Artist
  - [ ] Add resources
