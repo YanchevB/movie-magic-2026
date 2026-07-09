@@ -119,7 +119,7 @@ SoftUni JS Back-End Course Workshop
  - [ ] Add register post action
  - [ ] Add service
  - [ ] Add repository
- - [X] Add model
+ - [ ] Add model
  - [ ] Hash password `npm i bcrypt`
 
 ### Login
