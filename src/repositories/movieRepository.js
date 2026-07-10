@@ -19,7 +19,9 @@ async function writeDb(db) {
 }
 
 async function getAll(filter = {}) {
-    let movies = await readDb('movies');
+    let movies = await prisma.movie.findMany();
+
+    //TODO: Implement db filtering instead of filtering in memory
 
     if (filter.search) {
         movies = movies.filter(m => m.title.toLowerCase().includes(filter.search.toLowerCase()));
