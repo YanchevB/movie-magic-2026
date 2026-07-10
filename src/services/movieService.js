@@ -7,12 +7,13 @@ async function getAll(filter = {}) {
 function create(movieData) {
     movieData.rating = Number(movieData.rating);
     movieData.year = Number(movieData.year);
-    
+
     return movieRepository.create(movieData);
 }
 
 async function getById(movieId) {
-    return await movieRepository.getById(movieId);
+    const id =  Number(movieId);
+    return await movieRepository.getById(id);
 }
 
 const movieService = {

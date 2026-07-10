@@ -39,8 +39,13 @@ async function getAll(filter = {}) {
 }
 
 async function getById(movieId) {
-    const movies = await readDb('movies');
-    const movie = movies.find(m => m.id === movieId);
+    const movie = await prisma.movie.findUnique({
+        where: { id: movieId }
+    });
+
+    if(!movie) {
+        throw new Error('No movie found!')
+    }
 
     return movie;
 }
