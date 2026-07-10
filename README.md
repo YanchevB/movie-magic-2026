@@ -79,7 +79,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Remove file persistence related code
 
 ### Artist
- - [ ] Add resources
+ - [x] Add resources
  - [ ] Add artist model
  - [ ] Add artist view
  - [ ] Add artist controller
