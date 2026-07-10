@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Movie {
-  id          Int    @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   title       String
   category    String
   genre       String
@@ -27,4 +27,16 @@ model Movie {
   updatedAt   DateTime @updatedAt
 
   @@map("movies")
+}
+
+model Artist {
+  id        Int      @id @default(autoincrement())
+  name      String
+  age       Int
+  born      String
+  imageUrl  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("artists")
 }
