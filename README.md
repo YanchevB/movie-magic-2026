@@ -92,7 +92,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Attach Artist to Movie
  - [x] Add relation between artists and movies (Implicit many-to-many)
- - [ ] Add page view
+ - [x] Add page view
  - [ ] Add dynamic data
  - [ ] Populate artist select
  - [ ] Attach function
