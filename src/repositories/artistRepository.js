@@ -8,8 +8,14 @@ async function create(artistData) {
     return artist;
 }
 
+async function getAll() {
+    const artists = await prisma.artist.findMany();
+    return artists;
+}
+
 const artistRepository = {
-    create
+    create,
+    getAll
 }
 
 export default artistRepository

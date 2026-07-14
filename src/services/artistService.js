@@ -6,8 +6,13 @@ function create(artistData) {
    return artistRepository.create(artistData);
 }
 
+function getAll() {
+    return artistRepository.getAll();
+}
+
 const artistService = {
-    create
+    create,
+    getAll
 }
 
 export default artistService;
