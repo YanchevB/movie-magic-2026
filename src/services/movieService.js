@@ -16,10 +16,19 @@ async function getById(movieId) {
     return await movieRepository.getById(id);
 }
 
+async function attachArtist(movieId, artistId) {
+    movieId = Number(movieId);
+    artistId = Number(artistId);
+    const result = await movieRepository.attachArtist(movieId, artistId)
+
+    return result;
+}
+
 const movieService = {
     getAll,
     create,
-    getById
+    getById,
+    attachArtist
 }
 
 export default movieService;

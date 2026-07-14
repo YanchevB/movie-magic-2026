@@ -95,7 +95,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Add page view
  - [x] Add dynamic data
  - [x] Populate artist select
- - [ ] Attach function
+ - [x] Attach function
 
 ### Show Artists on Details Page
  - [ ] Modify details view
