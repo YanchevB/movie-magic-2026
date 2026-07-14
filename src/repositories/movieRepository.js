@@ -40,10 +40,13 @@ async function getAll(filter = {}) {
 
 async function getById(movieId) {
     const movie = await prisma.movie.findUnique({
-        where: { id: movieId }
+        where: { id: movieId },
+        include: {
+            artists: true
+        }
     });
 
-    if(!movie) {
+    if (!movie) {
         throw new Error('No movie found!')
     }
 
@@ -60,10 +63,10 @@ async function create(movieData) {
 
 async function attachArtist(movieId, artistId) {
     const result = await prisma.movie.update({
-        where: {id: movieId},
+        where: { id: movieId },
         data: {
             artists: {
-                connect: {id: artistId}
+                connect: { id: artistId }
             }
         }
     });

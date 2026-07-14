@@ -98,9 +98,9 @@ SoftUni JS Back-End Course Workshop
  - [x] Attach function
 
 ### Show Artists on Details Page
- - [ ] Modify details view
- - [ ] Link to attach page
- - [ ] Show dynamic cast
+ - [x] Modify details view
+ - [x] Link to attach page
+ - [x] Show dynamic cast
 
 ### Bonuses
  - [ ] Show filtered artists in attach page
