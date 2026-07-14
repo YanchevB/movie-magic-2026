@@ -8,8 +8,16 @@ async function create(artistData) {
     return artist;
 }
 
-async function getAll() {
-    const artists = await prisma.artist.findMany();
+async function getAll(filter = {}) {
+    const artists = await prisma.artist.findMany({
+        where: {
+            id: {
+                notIn: filter.exclude || [],
+            }
+        }
+    });
+
+
     return artists;
 }
 

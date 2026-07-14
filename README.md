@@ -103,7 +103,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Show dynamic cast
 
 ### Bonuses
- - [ ] Show filtered artists in attach page
+ - [x] Show filtered artists in attach page
  - [ ] Search filter in db
  - [ ] Name in movie (Explicit Many-to-Many)
  - [ ] Modify service export
