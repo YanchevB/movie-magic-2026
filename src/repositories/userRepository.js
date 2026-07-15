@@ -1,5 +1,14 @@
+import { prisma } from '../lib/prisma.js'
+
 function create(userData) {
-    console.log('Registering user:', userData);
+    const result = prisma.user.create({
+        data: {
+            email: userData.email,
+            password: userData.password
+        }
+    });
+
+    return result;
 }
 
 const userRepository = {
