@@ -52,7 +52,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Rating (temp solution)
  - [x] File Persistence
 
- ## Workshop 2 - PostgreSQL and Prisma
+## Workshop 2 - PostgreSQL and Prisma
 
 ### Prerequisites
  - [x] PostgreSQL Installed `psql --version`
@@ -108,7 +108,7 @@ SoftUni JS Back-End Course Workshop
  - [ ] Name in movie (Explicit Many-to-Many)
  - [ ] Modify service export
 
- ## Workshop 3 - Session and Authentication
+## Workshop 3 - Session and Authentication
 
 ### Intro
  - [x] Add resources
@@ -116,8 +116,8 @@ SoftUni JS Back-End Course Workshop
 ### Register
  - [x] Add auth controller
  - [x] Add register page
- - [ ] Add register post action
- - [ ] Add service
+ - [x] Add register post action
+ - [x] Add service
  - [ ] Add repository
  - [ ] Add model
  - [ ] Hash password `npm i bcrypt`
