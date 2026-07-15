@@ -1,7 +1,15 @@
-import userRepository from "../repositories/userRepository"
+import userRepository from "../repositories/userRepository";
+import bcrypt from 'bcrypt';
 
-function register(userData) {
-    return userRepository.create(userData)
+async function register(userData) {
+    const hashPassword = await bcrypt.hash(userData.password, 10);
+
+    const result = await userRepository.create({
+        ...userData,
+        password: hashPassword
+    });
+
+    return result;
 }
 
 const authService = {
