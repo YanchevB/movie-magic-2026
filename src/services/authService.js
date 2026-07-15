@@ -1,5 +1,7 @@
+import userRepository from "../repositories/userRepository"
+
 function register(userData) {
-    console.log('Registering user:', userData);
+    return userRepository.create(userData)
 }
 
 const authService = {
