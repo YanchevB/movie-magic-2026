@@ -115,7 +115,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Register
  - [x] Add auth controller
- - [ ] Add register page
+ - [x] Add register page
  - [ ] Add register post action
  - [ ] Add service
  - [ ] Add repository
