@@ -19,10 +19,12 @@ authController.get('/login', (req, res) => {
     res.render('auth/login');
 })
 
-authController.post('/login', (req, res) => {
+authController.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
-    authService.login({ email, password });
+    const token = await authService.login({ email, password });
+
+    console.log('Token', token);
 
     res.redirect('/')
 })
