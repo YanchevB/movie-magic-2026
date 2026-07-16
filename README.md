@@ -136,7 +136,7 @@ SoftUni JS Back-End Course Workshop
  - [ ] Use logout on invalid token
 
 ### Authentication & Authorization
- - [ ] Create auth middleware
+ - [x] Create auth middleware
  - [ ] Setup cookie parser
  - [ ] Validate token
  - [ ] Add isAuthenticated guard
