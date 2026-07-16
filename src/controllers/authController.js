@@ -24,7 +24,8 @@ authController.post('/login', async (req, res) => {
 
     const token = await authService.login({ email, password });
 
-    console.log('Token', token);
+    // Always put httpOnly, it means that the browser JS cannot use the cookie
+    res.cookie('auth', token, { httpOnly: true });
 
     res.redirect('/')
 })
