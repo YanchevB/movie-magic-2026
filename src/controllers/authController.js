@@ -22,7 +22,7 @@ authController.get('/login', (req, res) => {
 authController.post('/login', (req, res) => {
     const { email, password } = req.body;
 
-    console.log('login attempted', {email, password})
+    authService.login({ email, password });
 
     res.redirect('/')
 })
