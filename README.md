@@ -138,7 +138,7 @@ SoftUni JS Back-End Course Workshop
 ### Authentication & Authorization
  - [x] Create auth middleware
  - [x] Setup cookie parser
- - [ ] Validate token
+ - [x] Validate token
  - [ ] Add isAuthenticated guard
  - [ ] Add isGuest guard
  

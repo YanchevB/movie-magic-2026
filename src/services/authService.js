@@ -28,11 +28,11 @@ async function login(userData) {
     }
 
     // Issue token
-    const payload = { userId: user.id, email: user.email}
+    const payload = { id: user.id, email: user.email}
 
     // TODO fix the secret key
     const token = jwt.sign(payload, 'SECRET_KEY', { expiresIn: '1h' });
-    
+
     return token;
 }
 
