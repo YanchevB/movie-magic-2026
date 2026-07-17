@@ -20,14 +20,17 @@ movieController.post('/create', isAuth, async (req, res) => {
 //Details page
 movieController.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
+    const userId = req?.user.id;
 
     const movie = await movieService.getById(movieId);
+
+    const isOwner = movie.userId && movie.userId === userId;
 
     //Quick and basic solution to render the stars | TODO: Fix it 
     const rating = Math.floor(movie.rating);
     const ratingStars = '&#x2605;'.repeat(rating);
 
-    res.render('movies/details', { movie, pageTitle: movie.title, ratingStars });
+    res.render('movies/details', { movie, pageTitle: movie.title, ratingStars, isOwner });
 })
 
 movieController.get('/:movieId/attach', isAuth, async (req, res) => {

@@ -145,7 +145,7 @@ SoftUni JS Back-End Course Workshop
 ### Edit and Delete Movies
  - [x] Add user movies relation
  - [x] Add owner on movie create
- - [ ] Show dynamic details buttons
+ - [x] Show dynamic details buttons
  - [ ] Implement delete button
  - [ ] Add static edit page
  - [ ] Add dynamic values to edit page
