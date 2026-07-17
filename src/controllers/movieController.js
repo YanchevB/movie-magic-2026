@@ -60,4 +60,16 @@ movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     res.redirect('/')
 })
 
+movieController.get('/:movieId/edit', isAuth, async (req, res) => {
+    const movieId = Number(req.params.movieId);
+    const userId = req.user.id;
+
+    const movie = await movieService.getById(movieId);
+
+    if (movie.userId !== userId) {
+        return res.status(401).send('Unauthorized');
+    }
+    res.render('movies/edit', { pageTitle: 'Edit movie', movie});
+})
+
 export default movieController;
