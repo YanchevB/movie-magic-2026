@@ -39,12 +39,21 @@ async function deleteMovie(movieId, userId) {
     await movieRepository.deleteMovie(movieId, userId);
 }
 
+async function edit(movieId, movieData, userId) {
+    movieData.rating = Number(movieData.rating);
+    movieData.year = Number(movieData.year);
+    movieData.userId = userId;
+    
+    await movieRepository.edit(movieId, movieData, userId);
+}
+
 const movieService = {
     getAll,
     create,
     getById,
     attachArtist,
-    deleteMovie
+    deleteMovie,
+    edit
 }
 
 export default movieService;
