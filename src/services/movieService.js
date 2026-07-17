@@ -25,11 +25,26 @@ async function attachArtist(movieId, artistId) {
     return result;
 }
 
+async function deleteMovie(movieId, userId) {
+    const movie = await movieRepository.getById(movieId);
+
+    if (!movie) {
+        throw new Error('Movie not found!');
+    }
+
+    if (movie.userId !== userId) {
+        throw new Error('Unauthorized!');
+    }
+
+    await movieRepository.deleteMovie(movieId, userId);
+}
+
 const movieService = {
     getAll,
     create,
     getById,
-    attachArtist
+    attachArtist,
+    deleteMovie
 }
 
 export default movieService;
