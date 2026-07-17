@@ -152,7 +152,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Implement edit on post
 
 ### Dynamic Navigation
- - [ ] Show dynamic navigation based on user session
+ - [x] Show dynamic navigation based on user session
 
 ### Bonuses
  - [ ] Validate repeat password

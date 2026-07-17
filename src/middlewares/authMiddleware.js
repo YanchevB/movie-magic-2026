@@ -11,6 +11,8 @@ export function authMiddleware(req, res, next) {
         const decodedToken = jwt.verify(token, 'SECRET_KEY');
         
         req.user = decodedToken;
+        // Convention from handlebars for keeping constants during the request/response life cycle
+        res.locals.user = decodedToken;
     } catch (err) {
         res.clearCookie('auth');
         res.redirect('/auth/login');
