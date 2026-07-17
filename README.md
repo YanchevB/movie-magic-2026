@@ -143,7 +143,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Add isGuest guard
  
 ### Edit and Delete Movies
- - [ ] Add user movies relation
+ - [x] Add user movies relation
  - [ ] Add owner on movie create
  - [ ] Show dynamic details buttons
  - [ ] Implement delete button
