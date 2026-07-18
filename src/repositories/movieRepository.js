@@ -19,21 +19,19 @@ async function writeDb(db) {
 }
 
 async function getAll(filter = {}) {
-    let movies = await prisma.movie.findMany();
-
-    //TODO: Implement db filtering instead of filtering in memory
-
-    if (filter.search) {
-        movies = movies.filter(m => m.title.toLowerCase().includes(filter.search.toLowerCase()));
-    }
-
-    if (filter.genre) {
-        movies = movies.filter(m => m.genre.toLowerCase().includes(filter.genre.toLowerCase()));
-    }
-
-    if (filter.year) {
-        movies = movies.filter(m => m.year.toLowerCase().includes(filter.year.toLowerCase()));
-    }
+    let movies = await prisma.movie.findMany({
+        where: {
+            year: filter.year || undefined,
+            genre: {
+                equals: filter.genre || undefined,
+                mode: 'insensitive'
+            },
+            title: {
+                contains: filter.search || undefined,
+                mode: 'insensitive'
+            }
+        }
+    });
 
     return movies;
 }

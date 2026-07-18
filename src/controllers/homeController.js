@@ -15,6 +15,7 @@ homeController.get('/about', (req, res) => {
 
 homeController.get('/search', async (req, res) => {
     const filter = req.query;
+    filter.year = filter.year ? Number(filter.year) : undefined;
 
     const movies = await movieService.getAll(filter);
 
