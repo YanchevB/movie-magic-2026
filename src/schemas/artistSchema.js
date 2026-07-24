@@ -4,5 +4,13 @@ export const createArtistSchema = z.object({
     name: z.string()
         .min(3, { message: 'Name must be at least 3 characters long' })
         .max(50, { message: 'Name must be at most 50 characters long' })
-        
+        .regex(/^[A-Za-z ]+$/, { message: "Name can only contain letters and spaces" }),
+    age: z.coerce.number()
+        .min(1, { message: "Age must be at least 1" })
+        .max(120, { message: "Age must be at most 120" }),
+    born: z.string()
+        .min(10, { message: "Born must be at least 10 characters long" })
+        .regex(/^[A-Za-z0-9 ]+$/, { message: "Born can only contain letters, numbers, and spaces" }),
+    imageUrl: z.string()
+        .regex(/^https?:\/\//, { message: "Image URL must start with http:// or https://" }),
 })

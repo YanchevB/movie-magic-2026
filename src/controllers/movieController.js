@@ -28,7 +28,7 @@ movieController.post('/create', isAuth, async (req, res) => {
         
         const categoryOptions = prepareCategoryViewData(newMovie);
 
-        if (error.name === 'ZodErrors') {
+        if (error.name === 'ZodError') {
             errors = z.flattenError(error).fieldErrors;
     
         } else if (error.name === 'PrismaClientKnownRequestError') {

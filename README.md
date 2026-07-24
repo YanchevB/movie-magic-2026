@@ -177,7 +177,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Get prisma errors
 
 ### Artist validation and error handling
- - [ ] Create schema
+ - [x] Create schema
  - [ ] Validate on create
  - [ ] Get error message
 
