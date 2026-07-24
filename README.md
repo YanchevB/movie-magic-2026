@@ -172,7 +172,7 @@ SoftUni JS Back-End Course Workshop
  - [x] Populate already filled data
  - [x] Populate select category
  - [x] Show single error
- - [ ] Validate enum (movie category)
+ - [x] Validate enum (movie category)
  - [ ] Show multiple errors
  - [ ] Get prisma errors
 
