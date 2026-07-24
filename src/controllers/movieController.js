@@ -8,7 +8,7 @@ import * as z from "zod";
 const movieController = Router();
 
 movieController.get('/create', isAuth, (req, res) => {
-    const categoryOptions = prepareCategoryViewData({})
+    const categoryOptions = prepareCategoryViewData()
     res.render('movies/create', { categoryOptions, pageTitle: 'Create Movie' });
 });
 
@@ -23,17 +23,26 @@ movieController.post('/create', isAuth, async (req, res) => {
 
         res.redirect('/');
     } catch (error) {
-        if (error instanceof z.ZodError) {
-            const errors = z.flattenError(error).fieldErrors;
+        let errors = {};
+        let errorMessage = null;
+        
+        const categoryOptions = prepareCategoryViewData(newMovie);
 
-            const categoryOptions = prepareCategoryViewData(newMovie);
-
-            const firstError = Object.values(errors).flat().at(0)
-
-            res.status(400).render('movies/create', { movie: req.body, errors, error: firstError, categoryOptions, pageTitle: 'Create Movie' });
-        }
-    }
+        if (error.name === 'ZodErrors') {
+            errors = z.flattenError(error).fieldErrors;
     
+        } else if (error.name === 'PrismaClientKnownRequestError') {
+            switch (error.code) {
+                case 'P2002':
+                    errors = { title: ['Title must be unique']};
+
+                    break;
+            }
+        } else {
+            errorMessage = error.message || 'An unexpected error occurred';
+        }
+        res.status(400).render('movies/create', { movie: req.body, error: errorMessage, errors, categoryOptions, pageTitle: 'Create Movie' });
+    } 
 })
 
 //Details page
@@ -79,7 +88,7 @@ movieController.get('/:movieId/delete', isAuth, async (req, res) => {
     res.redirect('/')
 })
 
-function prepareCategoryViewData(movie) {
+function prepareCategoryViewData(movie = {}) {
     const categories = ['TV Show', 'Movie', 'Documentary', 'Animation', 'Short Film'];
 
     const categoryOptions = categories.map(category => {
