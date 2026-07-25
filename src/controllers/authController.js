@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import authService from '../services/authService';
 import { isAuth, isGuest } from '../middlewares/authMiddleware';
+import { createUserSchema  } from '../schemas/userSchema';
+import { getErrorMessage } from '../utils/errorUtils';
 
 const authController = Router();
 
@@ -9,11 +11,19 @@ authController.get('/register', isGuest, (req, res) => {
 })
 
 authController.post('/register', isGuest, async (req, res) => {
-    const { email, password, repeatPassword } = req.body;
+    try {
+        const userData = createUserSchema.parse(req.body);
 
-    await authService.register({ email, password, repeatPassword });
+        const token = await authService.register(userData);
 
-    res.redirect('/auth/login')
+        res.cookie('auth', token, { httpOnly: true });
+
+        res.redirect('/');
+
+    } catch (err) {
+        const error = getErrorMessage(err);
+        res.render('auth/register', { error });
+    }
 })
 
 authController.get('/login', isGuest, (req, res) => {
