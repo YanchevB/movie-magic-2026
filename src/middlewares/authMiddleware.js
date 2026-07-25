@@ -8,14 +8,15 @@ export function authMiddleware(req, res, next) {
     }
 
     try {
-        const decodedToken = jwt.verify(token, 'SECRET_KEY');
+        const secret = process.env.AUTH_SECRET;
+        const decodedToken = jwt.verify(token, secret);
         
         req.user = decodedToken;
         // Convention from handlebars for keeping constants during the request/response life cycle
         res.locals.user = decodedToken;
     } catch (err) {
         res.clearCookie('auth');
-        res.redirect('/auth/login');
+        return res.redirect('/auth/login');
     }
 
     next();
