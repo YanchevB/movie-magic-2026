@@ -1,16 +1,18 @@
 import userRepository from "../repositories/userRepository";
-import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
+import { generateAuthToken } from "../utils/tokenUtils";
 
 async function register(userData) {
     const hashPassword = await bcrypt.hash(userData.password, 10);
 
-    const result = await userRepository.create({
+    const createdUser = await userRepository.create({
         ...userData,
         password: hashPassword
     });
 
-    return result;
+    const token = generateAuthToken(createdUser);
+
+    return token;
 }
 
 async function login(userData) {
@@ -27,12 +29,7 @@ async function login(userData) {
         throw new Error('Invalid username or password!');
     }
 
-    // Issue token
-    const payload = { id: user.id, email: user.email}
-
-    // TODO fix the secret key
-    const token = jwt.sign(payload, 'SECRET_KEY', { expiresIn: '1h' });
-
+    const token = generateAuthToken(user);
     return token;
 }
 
