@@ -155,7 +155,6 @@ SoftUni JS Back-End Course Workshop
  - [x] Show dynamic navigation based on user session
 
 ### Bonuses
- - [ ] Validate repeat password
  - [x] Automatic login on register
  - [x] Fix secret
  - [x] Fix select on edit
