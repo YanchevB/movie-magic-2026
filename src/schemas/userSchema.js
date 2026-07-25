@@ -1,9 +1,14 @@
 import * as z from "zod";
+import userRepository from "../repositories/userRepository";
 
 export const createUserSchema = z.object({
     email: z.string()
         .email({ message: "Invalid email address" })
         .min(10, { message: "Email should be at least 10 characters long" })
+        .refine(async (value) => {
+            const result = await userRepository.findByEmail(value);
+            return !result;
+        }, { error: "User already exists"} )
         .trim(),
     password: z.string()
         .min(6, { message: "Password should be at least 6 characters long" })

@@ -12,7 +12,7 @@ authController.get('/register', isGuest, (req, res) => {
 
 authController.post('/register', isGuest, async (req, res) => {
     try {
-        const userData = createUserSchema.parse(req.body);
+        const userData = await createUserSchema.parseAsync(req.body);
 
         const token = await authService.register(userData);
 
@@ -22,7 +22,7 @@ authController.post('/register', isGuest, async (req, res) => {
 
     } catch (err) {
         const error = getErrorMessage(err);
-        res.render('auth/register', { error });
+        res.render('auth/register', { error, ...req.body });
     }
 })
 
