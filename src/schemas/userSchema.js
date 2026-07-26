@@ -6,11 +6,11 @@ export const createUserSchema = z.object({
     email: z.string()
         .email({ message: "Invalid email address" })
         .min(10, { message: "Email should be at least 10 characters long" })
+        .trim()
         .refine(async (value) => {
             const result = await userRepository.findByEmail(value);
             return !result;
-        }, { error: "User already exists"} )
-        .trim(),
+        }, { error: "User already exists"} ),
     password: z.string()
         .min(6, { message: "Password should be at least 6 characters long" })
         .regex(/^[a-zA-Z0-9]+$/, { message: "Password must contain at least one letter and one number" }),
