@@ -1,5 +1,6 @@
 import * as z from "zod";
 import userRepository from "../repositories/userRepository";
+import bcrypt from 'bcrypt';
 
 export const createUserSchema = z.object({
     email: z.string()
@@ -17,4 +18,11 @@ export const createUserSchema = z.object({
 }).refine((data) => data.password === data.repeatPassword, {
     message: "Passwords do not match",
     path: ["repeatPassword"]
-}).transform(({repeatPassword, ...data}) => data)
+}).transform(async ({repeatPassword, ...data}) => {
+    const hashedPassword = await bcrypt.hash(data.password, 10);
+
+    return {
+        ...data,
+        password: hashedPassword
+    }
+})
