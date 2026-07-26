@@ -8,7 +8,12 @@ const app = express();
 
 // Setup Handlebars
 app.engine('hbs', engine({
-    extname: 'hbs'
+    extname: 'hbs',
+    helpers: {
+        setTitle(title) {
+            this.pageTitle = title;
+        }
+    }
 }));
 app.set('view engine', 'hbs');
 app.set('views', './src/views');

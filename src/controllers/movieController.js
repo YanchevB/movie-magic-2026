@@ -41,7 +41,7 @@ movieController.post('/create', isAuth, async (req, res) => {
         } else {
             errorMessage = error.message || 'An unexpected error occurred';
         }
-        res.status(400).render('movies/create', { movie: req.body, error: errorMessage, errors, categoryOptions, pageTitle: 'Create Movie' });
+        res.status(400).render('movies/create', { movie: req.body, error: errorMessage, errors, categoryOptions });
     } 
 })
 
@@ -67,7 +67,7 @@ movieController.get('/:movieId/attach', isAuth, async (req, res) => {
 
     const artists = await artistService.getAll({ exclude: movie.artists.map(artist => artist.id) })
 
-    res.render('movies/attach', { pageTitle: 'Attach Artist', movie, artists });
+    res.render('movies/attach', { movie, artists });
 })
 
 movieController.post('/:movieId/attach', isAuth, async (req, res) => {
@@ -115,7 +115,7 @@ movieController.get('/:movieId/edit', isAuth, async (req, res) => {
     }
 
     const categoryOptions = prepareCategoryViewData(movie);
-    res.render('movies/edit', { pageTitle: 'Edit movie', movie, categoryOptions });
+    res.render('movies/edit', { movie, categoryOptions });
 })
 
 movieController.post('/:movieId/edit', isAuth, async (req, res) => {

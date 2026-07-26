@@ -7,7 +7,7 @@ import { getErrorMessage } from "../utils/errorUtils";
 const artistController = Router();
 
 artistController.get('/create', isAuth, (req, res) => {
-    res.render('artists/create', { pageTitle: 'Create Artist' });
+    res.render('artists/create');
 });
 
 artistController.post('/create', isAuth, async (req, res) => {
@@ -21,7 +21,7 @@ artistController.post('/create', isAuth, async (req, res) => {
     } catch (err) {
         const error = getErrorMessage(err);
 
-        res.status(400).render('artists/create', { artist: req.body, error, pageTitle: 'Create Artist' });
+        res.status(400).render('artists/create', { artist: req.body, error });
     }
 })
 

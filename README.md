@@ -186,4 +186,4 @@ SoftUni JS Back-End Course Workshop
  - [x] Validate unique email (async validation)
 
 ### Bonus
- - [ ] Fix dynamic page titles
+ - [x] Fix dynamic page titles
