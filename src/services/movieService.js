@@ -17,10 +17,10 @@ async function getById(movieId) {
     return await movieRepository.getById(id);
 }
 
-async function attachArtist(movieId, artistId) {
+async function attachArtist(movieId, artistId, character) {
     movieId = Number(movieId);
     artistId = Number(artistId);
-    const result = await movieRepository.attachArtist(movieId, artistId)
+    const result = await movieRepository.attachArtist(movieId, artistId, character)
 
     return result;
 }

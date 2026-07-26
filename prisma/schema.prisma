@@ -27,8 +27,8 @@ model Movie {
   updatedAt   DateTime @updatedAt
   userId      Int?
 
-  artists Artist[]
-  owner   User?    @relation(fields: [userId], references: [id])
+  owner   User?         @relation(fields: [userId], references: [id])
+  artists MovieArtist[]
 
   @@map("movies")
 }
@@ -42,9 +42,21 @@ model Artist {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  movie Movie[]
+  movies MovieArtist[]
 
   @@map("artists")
+}
+
+model MovieArtist {
+  movieId   Int
+  artistId  Int
+  character String
+
+  movie  Movie  @relation(fields: [movieId], references: [id])
+  artist Artist @relation(fields: [artistId], references: [id])
+
+  @@id([movieId, artistId])
+  @@map("movies_artists")
 }
 
 model User {

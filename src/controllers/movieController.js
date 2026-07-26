@@ -73,8 +73,9 @@ movieController.get('/:movieId/attach', isAuth, async (req, res) => {
 movieController.post('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const artistId = req.body.artist;
+    const character = req.body.character
 
-    await movieService.attachArtist(movieId, artistId);
+    await movieService.attachArtist(movieId, artistId, character);
 
     res.redirect(`/movies/${movieId}/details`);
 })

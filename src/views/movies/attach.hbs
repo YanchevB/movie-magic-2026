@@ -10,10 +10,14 @@
                 <label for="cast">Cast</label>
                 <select id="cast" name="artist">
                 <option value="none" selected>--------</option>
-                {{#each artists}}
-                <option value="{{id}}">{{name}}</option>
-                {{/each}}
+                    {{#each artists}}
+                    <option value="{{id}}">{{name}}</option>
+                    {{/each}}
                 </select>
+                <div style="width: 50%; margin: 0 auto; display:flex; ">
+                    <label for="name-in-movie">Character :</label>
+                    <input type="text" class="inputFields" id="name-in-movie" name="character"/>
+                </div>
                 <div id="center-btn">
                     <button id="create-btn">Add Cast</button>
                 </div>
